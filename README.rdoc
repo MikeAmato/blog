@@ -1,28 +1,47 @@
-== README
+Project 1 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Blog App
 
-Things you may want to cover:
+Overview - 
 
-* Ruby version
+My blog app will allow users to sign in to a secure account and 
+to write their own 255 character blogs and store them for future reference.
+It will also use the Twitter API to pull in random tweets that are of interest 
+to the user based on their blogs. It will also rate each blog with a positive and negeative 
+rating in order to show the user their ......Mood??..... or just to provide an interesting 
+display for their blog's. 
 
-* System dependencies
+Technologies used 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-Ruby 1.9.3
+-Rails 4.1.6
+-Postgresql Database
+-Authentication and Authorization
+-bcrypt-ruby
+-HTTParty
+-capybara
+-factory-girl
+-bootstrap-sass
+-twitter-bootstrap-rails
+-font-awesome-sass
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Use the Twitter API to pull in random tweets of topics in the user blog 
+
+have a user db, blog db, and maybe a twitter db??, or a positive/negative blog db for the rating
+
+User stories to be completed 
+
+-As a user, I can sign up for an account with an email address and password
+-As a user, I can login and logout of my account
+-As a user, I can create a blog 
+-As a user, I can edit an already made blog
+-As a user, I can view random Twitter feeds that have similar key words to my blogs
+-As a user, I can see my positive/negative rating for each blog and over all
+-As a user, I can see which words and blogs were the most negative and positive
+-As a user, I can set my blog to private or public
+-As a user, I can see other people's public blog's 
+-As a user, I can hack the Gibson and take over the internet
+-As a user, I can delete a blog
+-As a user, I can delete all blog's at once
+-As a user, I can delete my account
