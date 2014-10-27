@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   match '/about', to: 'static_pages#about', via: 'get'
   match '/help', to: 'static_pages#help', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
-  
+  match '/signin', to: 'users#home', via: 'get'
+  match '/journal', to: 'journals#new', via: 'get'
   #this handles the callback from the twitter api need to do more to it
   # match '/auth/:provider/callback', to: 'static_pages#home'
 

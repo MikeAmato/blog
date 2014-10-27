@@ -16,7 +16,7 @@ gem 'execjs'
 gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'sass', '~> 3.2.0'
-gem 'sass-rails',   '~> 4.0.3'
+gem 'sass-rails',   '~> 4.0.3'  
 gem 'coffee-rails', '~> 4.1.0'
 gem 'railties', '~> 4.1.6'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -24,6 +24,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'protected_attributes', '~> 1.0.8'
 gem 'activerecord-session_store' 
 gem 'omniauth'
+gem 'httparty'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   validates :password_confirmation, length: { minimum: 6 }
 
   def self.new_remember_token
-    SecureRandom.urlsafe_based64
+    SecureRandom.urlsafe_base64
   end
 
   def self.digest(token)

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
    if @user.save!
      sign_in(@user)
      session[:current_user_id] = @user.id
-      redirect_back_or user_path(@user.id), notice: "Welcome"
+      redirect_back_or(user_path(@user.id))
    else
       flash[:error] = "Cannot create a user, check the input and try again"
       render 'new'
