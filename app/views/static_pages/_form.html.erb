@@ -1,0 +1,17 @@
+<%= form_for(:journal) do |f| %>
+
+<%# render 'shared/error_messages', object: f.object %>
+
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  
+  <div>
+    <%= f.submit 'Save' %>
+  </div>
+
+<% end %> 
+
+<%# link_to "Delete", Journal.first, method: :delete %>
+
