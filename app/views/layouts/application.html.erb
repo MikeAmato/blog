@@ -32,13 +32,8 @@
   <%= render 'layouts/navigation' %>
 </header>
 <body>
-  <!-- <div id="main-container" class="container">
-    <div class="row">
-      <div class="col-xs-3">
-        <h3>Mike's Todo App</h3>
-      </div>
-        <div class="col-xs-9">    
--->
+  
+  <%= debug(params) if Rails.env.development? %>
 <%= flash[:notice] %>
 
 <%= yield %>

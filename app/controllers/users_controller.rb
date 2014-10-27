@@ -8,11 +8,12 @@ class UsersController < ApplicationController
 
   def create
    @user = User.new(user_params)
-   if @user.save
+   if @user.save!
      sign_in(@user)
      session[:current_user_id] = @user.id
       redirect_back_or user_path(@user.id), notice: "Welcome"
    else
+      flash[:error] = "Cannot create a user, check the input and try again"
       render 'new'
     end
   end
