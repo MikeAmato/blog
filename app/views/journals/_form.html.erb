@@ -1,38 +1,26 @@
 <%= provide(:title, "Sign Up")%>
 
-<h1>Sign In</h1>
+<h1>New Blog</h1>
 
-<%= form_for(@journal) do |journal| %>
+<%= form_for(@journal) do |j| %>
 
  <%# render 'shared/error_messages', object: @journal %> 
 
-  <div>
-    <%= journal.label :name %>
-    <%= journal.text_field :name %>
-  </div>
-  <br/>
+ <div>
+  <%= j.label :title %>
+  <%= j.text_field :title %>
+ </div>
 
   <div>
-    <%= journal.label :email %>
-    <%= journal.text_field :email %>
-  </div>
-  <br/>
-
-  <div>
-    <%= journal.label :password %>
-    <%= journal.password_field :password%>
-  </div>
-  <br/>
-
-  <div>
-    <%= journal.label :password_confirmation %>
-    <%= journal.password_field :password_confirmation%>
+    <%= j.label :blog_contents %>
+    <%= j.text_field :blog_contents %>
   </div>
   <br/>
   
   <div>
-    <%= journal.submit 'Done' %>
+    <%= j.submit 'Done' %>
   </div>
+
 <% end %> 
 
 <%# link_to "Delete", Journal.first, method: :delete %>

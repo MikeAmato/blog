@@ -12,7 +12,7 @@ end
 
 def create 
   @journal = Journal.new(journal_params)
-  if @journal.save 
+  if @journal.save
     redirect_to journal_path(@journal.id), notice: "You have created a new entry."
   else
     render 'new'
