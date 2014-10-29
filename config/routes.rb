@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 #get '/sessions/new', to: 'users#home', as: 'Index' 
 
   resources :journals #only: [:show, :new, :create, :index, :edit]
-  resources :users #only: [:create, :edit, :destroy]
-  resources :sessions #only: [:new, :create, :destroy]
+  resources :users, only: [:create, :edit, :destroy, :show]
+  resources :sessions, only: [:create, :destroy]
 
   
   #post '/signin', to: 'users#home' 

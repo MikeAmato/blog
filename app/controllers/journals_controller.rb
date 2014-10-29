@@ -1,4 +1,5 @@
 class JournalsController < ApplicationController
+  include SessionHelper
   before_action :signed_in_user
   #add a user_id to the Journal table and use it here
 
@@ -13,9 +14,11 @@ end
 
 def create 
   #@journal = Journal.new(journal_params)
-  @journal = current_user.journals.build(journals_params)  #//for current user
+  @journal = current_user.journals.build(journal_params)  #//for current user
   if @journal.save
     redirect_to journal_path(@journal.id), notice: "You have created a new entry."
+  elsif SessionHelper.signed_in
+
   else
     render 'new'
   end
@@ -54,7 +57,6 @@ end
 private
 
   def journal_params
-    User.user_id = current_user.id
     params.require(:journal).permit(:title, :blog_contents, :user_id)
   end
 

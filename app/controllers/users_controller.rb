@@ -52,6 +52,7 @@ class UsersController < ApplicationController
     def signed_in_user
       unless signed_in?
         store_location
+        flash[:danger] = "Please log in"
         redirect_to(root_path) unless current_user?(@user)
       end
     end

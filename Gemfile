@@ -26,6 +26,7 @@ gem 'activerecord-session_store'
 gem 'omniauth'
 gem 'httparty'
 gem 'twitter'
+gem 'sentimental'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

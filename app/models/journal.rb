@@ -1,7 +1,7 @@
 class Journal < ActiveRecord::Base
   require 'twitter'
 
-  belongs_to :user
+  belongs_to :users
 
   attr_accessible :title, :blog_contents 
 
