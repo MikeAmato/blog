@@ -1,5 +1,6 @@
 class JournalsController < ApplicationController
   before_action :signed_in_user
+  #add a user_id to the Journal table and use it here
 
 def show
   @journal = Journal.find(params[:id])
@@ -11,7 +12,8 @@ end
 
 
 def create 
-  @journal = Journal.new(journal_params)
+  #@journal = Journal.new(journal_params)
+  @journal = current_user.journals.build(journals_params)  #//for current user
   if @journal.save
     redirect_to journal_path(@journal.id), notice: "You have created a new entry."
   else
@@ -38,7 +40,8 @@ def update
 end
 
 def index 
-  @journal = Journal.all
+  #@journal = Journal.all
+  current_user.journals
 end
 
 def destroy 
@@ -51,7 +54,8 @@ end
 private
 
   def journal_params
-    params.require(:journal).permit(:title, :blog_contents)
+    User.user_id = current_user.id
+    params.require(:journal).permit(:title, :blog_contents, :user_id)
   end
 
   def signed_in_user

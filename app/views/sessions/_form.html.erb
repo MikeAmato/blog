@@ -1,37 +1,33 @@
-<%= provide(:title, "Sign Up")%>
+<!DOCTYPE html>
+<html><head>
+<%= provide(:title, "Sign In")%>
 
-<h1>Sign In</h1>
+ <!-- CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/session.css.scss">
 
-<%= form_for(:user) do |s| %>
+</head>
+<h1 class="center_align">Sign In</h1>
+
+<%# form_for(:user) do |s| %>
+<%= form_for(:session, url: sessions_path) do |s| %>
 
  <%# render 'shared/error_messages', object: @s %> 
-
-  <!-- <div>
-    <%= s.label :name %>
-    <%= s.text_field :name %>
-  </div>
-  <br/> -->
-
   <div>
-    <%= s.label :email %>
-    <%= s.text_field :email %>
-  </div>
-  <br/>
+    <div>
+      <%= s.label :email %>
+      <%= s.text_field :email %>
+    </div>
+    <br/>
 
-  <div>
-    <%= s.label :password %>
-    <%= s.password_field :password%>
-  </div>
-  <br/>
-
-<!--   <div>
-    <%= s.label :password_confirmation %>
-    <%= s.password_field :password_confirmation%>
-  </div>
-  <br/> -->
-  
-  <div>
-    <%= s.submit 'Done' %>
+    <div>
+      <%= s.label :password %>
+      <%= s.password_field :password%>
+    </div>
+    <br/>
+    
+    <div>
+      <%= s.submit 'Done' %>
+    </div>
   </div>
 <% end %> 
 

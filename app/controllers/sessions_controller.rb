@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
-    if user && User.authenticate(params[:session][:password_digest])
+    if user && user.authenticate(params[:session][:password])
       sign_in(user)
       redirect_back_or user_path(user)
     else
@@ -15,11 +15,10 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    #have to look up how to destroy a session 
+    sign_out
+    redirect_to root_path
   end
 
-
-#####this is a raise exception for the returned auth
-  # s
-
+  def show
+  end
 end

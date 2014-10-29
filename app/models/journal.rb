@@ -1,4 +1,6 @@
 class Journal < ActiveRecord::Base
+  require 'twitter'
+
   belongs_to :user
 
   attr_accessible :title, :blog_contents 
@@ -6,8 +8,15 @@ class Journal < ActiveRecord::Base
   validates :title, presence: true, length: { maximum: 50 }
   validates :blog_contents, presence: true, length: { in: 3..254 }
   
+  def get_tweets(search)
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key = "C56CClz65LWoyXrAniUkLV5iX"
+      config.consumer_secret = "A6aWqbd38JcoKzolVRhTuIRGpUpXernsLQSG4kkCsJRNBhLcX1"
+    end
 
-  def get_twitter_posts
-    posts = HTTParty.get "https://api.twitter.com/1.1/search/tweets.json?q=%40twitterapi&count=5"
+    client.search("#{search}", :count => 5).each do |tweet| 
+      puts "#{tweet.user.name} (@#{tweet.user.screen_name}): #{tweet.text}"
+    end
   end
+
 end

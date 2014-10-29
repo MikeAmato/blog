@@ -2,26 +2,31 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
-  get '/sessions/new'
+  get '/home', to: redirect('/')
 
-  get '/sessions/create'
+#get '/sessions/new', to: 'users#home', as: 'Index' 
 
-  get '/sessions/destroy'
+  resources :journals #only: [:show, :new, :create, :index, :edit]
+  resources :users #only: [:create, :edit, :destroy]
+  resources :sessions #only: [:new, :create, :destroy]
 
-  match '/home', to: 'static_pages#home', via: 'get'
-  match '/about', to: 'static_pages#about', via: 'get'
-  match '/help', to: 'static_pages#help', via: 'get'
-  match '/signup', to: 'users#new', via: 'get'
-  match '/signin', to: 'users#home', via: 'get'
-  match '/journals', to: 'journals#new', via: 'get'
-  match '/journals/:id', to: 'journals#show', via: 'get'
+  
+  #post '/signin', to: 'users#home' 
+
+  # get '/sessions/create'
+
+  # get '/sessions/destroy', to: 'static_pages#home', as: 'Home'
+
+   match '/signup', to: 'users#new', via: 'get'
+   match '/signin', to: 'sessions#new', via: 'get'
+   match '/signout', to: 'sessions#destroy', via: 'get'
+  # #match '/sessions/new', to: 'users#home', via: 'post'
+  # match '/journals/add', to: 'journals#new', via: 'get'
+  # match '/journals/:id', to: 'journals#show', via: 'get'
   #this handles the callback from the twitter api need to do more to it
   # match '/auth/:provider/callback', to: 'static_pages#home'
 
-  resources :journals #only: [:show, :new, :create, :index, :edit]
-  resources :users #only: [:create, :destroy]
-  resources :sessions #only: [:new, :create, :destroy]
-  # The priority is based upon order of creation: first created -> highest priority.
+   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

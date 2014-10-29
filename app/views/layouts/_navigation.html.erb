@@ -15,9 +15,14 @@
   
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/user/user_path">Home</a></li>
-        <li><a href="/user/user_path/edit">Edit</a></li>
-        <li><a href="/journal/add">Add</a></li>
+        <li><a href="/users/user_path">Home</a></li>
+        <li><a href="/users/user_path/edit">Edit</a></li>
+        <li><a href="/journals/new">Add</a></li>
+        <% if signed_in? %> 
+          <li><a href="/sessions/destroy">Sign Out</a></li>
+        <% else %>
+          <li><a href="/signin">Sign In</a></li>
+        <% end %>
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i class="fa fa-caret-down"></i></a>
           <ul class="dropdown-menu" role="menu">
