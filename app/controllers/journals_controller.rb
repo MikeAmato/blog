@@ -1,7 +1,7 @@
 class JournalsController < ApplicationController
   include SessionHelper
   include JournalHelper
-  before_action :signed_in_user
+  #before_action :signed_in_user
 
 def show
   @movie = search("cars")
@@ -51,7 +51,7 @@ end
 private
 
   def journal_params
-    params.require(:journal).permit(:title, :blog_contents, :user_id)
+    params.require(:journal).permit(:title, :blog_contents)
   end
 
   def signed_in_user

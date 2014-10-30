@@ -22,7 +22,7 @@ Rails.application.routes.draw do
    match '/signout', to: 'sessions#destroy', via: 'get'
    match '/journals/tweets', to: 'journals#show', via: 'get'
   # #match '/sessions/new', to: 'users#home', via: 'post'
-  # match '/journals/add', to: 'journals#new', via: 'get'
+   match '/journals/new', to: 'journals#new', via: 'get'
   # match '/journals/:id', to: 'journals#show', via: 'get'
   #this handles the callback from the twitter api need to do more to it
   # match '/auth/:provider/callback', to: 'static_pages#home'
