@@ -17,7 +17,7 @@
       <ul class="nav navbar-nav">
         <% if signed_in? %> 
           <li><a href="/users/user_path/edit">Edit</a></li>
-          <li><a href="/journals/new">Add</a></li>
+          <li><%= link_to "Add", new_journal_path %></a></li>
           <li><%= link_to "Sign Out", signout_path %></li>
 
         <% else %>
