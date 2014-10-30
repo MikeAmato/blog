@@ -4,28 +4,18 @@ Rails.application.routes.draw do
 
   get '/home', to: redirect('/')
 
-#get '/sessions/new', to: 'users#home', as: 'Index' 
-
   resources :journals, only: [:show, :new, :create, :index, :edit]
   resources :users, only: [:create, :edit, :destroy, :show]
   resources :sessions, only: [:create, :destroy]
 
-  
-  #post '/signin', to: 'users#home' 
-
-  # get '/sessions/create'
-
-  # get '/sessions/destroy', to: 'static_pages#home', as: 'Home'
-
-   match '/signup', to: 'users#new', via: 'get'
-   match '/signin', to: 'sessions#new', via: 'get'
-   match '/signout', to: 'sessions#destroy', via: 'get'
-   match '/journals/tweets', to: 'journals#show', via: 'get'
+   # match '/signup', to: 'users#new', via: 'get'
+   # match '/signin', to: 'sessions#new', via: 'get'
+   # match '/signout', to: 'sessions#destroy', via: 'get'
+   # match '/journals/tweets', to: 'journals#show', via: 'get'
   # #match '/sessions/new', to: 'users#home', via: 'post'
-   match '/journals/new', to: 'journals#new', via: 'get'
+   # match '/journals/new', to: 'journals#new', via: 'get'
   # match '/journals/:id', to: 'journals#show', via: 'get'
-  #this handles the callback from the twitter api need to do more to it
-  # match '/auth/:provider/callback', to: 'static_pages#home'
+  
 
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
