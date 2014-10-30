@@ -1,0 +1,16 @@
+<h1>Hello</h1>
+<p><%= @foo %></p>
+<%= @car %>
+
+<ul class="journals">
+
+<p>
+<% @journals.each do |j| %> 
+
+<%= j.title %><br/>
+<%= j.blog_contents %><br/>
+
+<% end %>
+</p>
+
+</ul> 

@@ -23,10 +23,10 @@ gem 'railties', '~> 4.1.6'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'protected_attributes', '~> 1.0.8'
 gem 'activerecord-session_store' 
-gem 'omniauth'
 gem 'httparty'
 gem 'twitter'
 gem 'sentimental'
+gem 'twitter_oauth'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

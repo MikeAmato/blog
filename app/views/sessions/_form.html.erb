@@ -12,20 +12,20 @@
 <%= form_for(:session, url: sessions_path) do |s| %>
 
  <%# render 'shared/error_messages', object: @s %> 
-  <div>
+  <div class="center_align">
     <div>
       <%= s.label :email %>
       <%= s.text_field :email %>
     </div>
     <br/>
 
-    <div>
+    <div class="center_align">
       <%= s.label :password %>
       <%= s.password_field :password%>
     </div>
     <br/>
     
-    <div>
+    <div class="center_align">
       <%= s.submit 'Done' %>
     </div>
   </div>
