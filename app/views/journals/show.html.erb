@@ -10,12 +10,12 @@
   <body>
     <h1>THis is the show page</h1>
 
-<p>
-<%= @journal.title %> 
+    <pre> <%= @movie.keys %> </pre>
 
-<%= @journal.blog_contents %>
-</p>
-
+    <p>
+      <%= @movie["movies"][0]["title"] %>
+      <%= image_tag @movie["movies"][0]["posters"]["profile"] %>
+    </p>
 
       <footer>
       </footer>

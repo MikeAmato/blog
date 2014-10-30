@@ -1,9 +1,10 @@
 class JournalsController < ApplicationController
   include SessionHelper
+  include JournalHelper
   before_action :signed_in_user
 
 def show
-  @journal = Journal.find(params[:id])
+  @movie = search("cars")
 end
 
 def new
@@ -24,9 +25,9 @@ def put
   redirect_to journal_path(@journal.id)
 end
 
-def edit
-  @journal = Journal.find(params(:id))
-end
+# def edit
+#   @journal = Journal.find(params(:id))
+# end
 
 def update 
   @journal = Journal.find(params(:id))

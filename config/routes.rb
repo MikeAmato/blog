@@ -20,6 +20,7 @@ Rails.application.routes.draw do
    match '/signup', to: 'users#new', via: 'get'
    match '/signin', to: 'sessions#new', via: 'get'
    match '/signout', to: 'sessions#destroy', via: 'get'
+   match '/journals/tweets', to: 'journals#show', via: 'get'
   # #match '/sessions/new', to: 'users#home', via: 'post'
   # match '/journals/add', to: 'journals#new', via: 'get'
   # match '/journals/:id', to: 'journals#show', via: 'get'
