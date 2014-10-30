@@ -1,7 +1,7 @@
 class JournalsController < ApplicationController
   include SessionHelper
   include JournalHelper
-  #before_action :signed_in_user
+  before_action :signed_in_user
 
 def show
   @movie = search("cars")
@@ -25,10 +25,6 @@ def put
   redirect_to journal_path(@journal.id)
 end
 
-# def edit
-#   @journal = Journal.find(params(:id))
-# end
-
 def update 
   @journal = Journal.find(params(:id))
   if @journal.update_attributes(journal_params)
@@ -51,7 +47,7 @@ end
 private
 
   def journal_params
-    params.require(:journal).permit(:title, :blog_contents)
+    params.require(:journal).permit(:name, :blog_contents)
   end
 
   def signed_in_user

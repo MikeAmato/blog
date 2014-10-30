@@ -8,13 +8,11 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :edit, :destroy, :show]
   resources :sessions, only: [:create, :destroy]
 
-   # match '/signup', to: 'users#new', via: 'get'
-   # match '/signin', to: 'sessions#new', via: 'get'
-   # match '/signout', to: 'sessions#destroy', via: 'get'
-   # match '/journals/tweets', to: 'journals#show', via: 'get'
-  # #match '/sessions/new', to: 'users#home', via: 'post'
+   match '/signup', to: 'users#new', via: 'get'
+   match '/signin', to: 'sessions#new', via: 'get'
+   match '/signout', to: 'sessions#destroy', via: 'get'
+   match '/journals/tweets', to: 'journals#show', via: 'get'
    # match '/journals/new', to: 'journals#new', via: 'get'
-  # match '/journals/:id', to: 'journals#show', via: 'get'
   
 
    # The priority is based upon order of creation: first created -> highest priority.
