@@ -21,6 +21,7 @@ class StaticPagesController < ApplicationController
       @display_plot_zero = search_plot(@journals[0].name)
        @display_plot_one = search_plot(@journals[1].name)
         @display_plot_two = search_plot(@journals[2].name)
+        #new to try using display_plot[i] = to force it into an array of hashes
     end
   end
 end
