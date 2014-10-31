@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
-<h1>this is the user show page</h1>
-<div>
-  <p>
-    <%= @user.name %>
-  </p>
+<div class="welcome">
+  <h1>Welcome <%= @user.name %></h1>
+  <p>User Information</p>
+  <div>
+      <%= @user.name %>
+  </div>
+  <div>
+    <p>
+      <%= @user.email %>
+    </p>
+  </div>
 </div>
-<div>
-  <p>
-    <%= @user.email %>
-  </p>
-</div>
-
-
-<p>
-this is where the users blogs will be displayed 
-</p>
 </html>

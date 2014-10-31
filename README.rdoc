@@ -1,15 +1,12 @@
 Project 1 
 
-Blog App
+Movie Blog App
 
 Overview - 
 
 My blog app will allow users to sign in to a secure account and 
 to write their own 255 character blogs and store them for future reference.
-It will also use the Twitter API to pull in random tweets that are of interest 
-to the user based on their blogs. It will also rate each blog with a positive and negeative 
-rating in order to show the user their ......Mood??..... or just to provide an interesting 
-display for their blog's. 
+It will also use two movie database APIs to pull in movie information that coresponds to their blog. 
 
 Technologies used 
 
@@ -24,24 +21,20 @@ Technologies used
 -bootstrap-sass
 -twitter-bootstrap-rails
 -font-awesome-sass
+-tzinfo-data, platforms: [:mingw, :mswin, :x64_mingw]
+-protected_attributes, ~> 1.0.8
+-activerecord-session_store
+-themoviedb
 
 
-Use the Twitter API to pull in random tweets of topics in the user blog 
+Use the two movie APIs to pull in movie information based on the users blog 
 
-have a user db, blog db, and maybe a twitter db??, or a positive/negative blog db for the rating
+have a user db, blog db
 
 User stories to be completed 
 
 -As a user, I can sign up for an account with an email address and password
 -As a user, I can login and logout of my account
--As a user, I can create a blog 
--As a user, I can edit an already made blog
--As a user, I can view random Twitter feeds that have similar key words to my blogs
--As a user, I can see my positive/negative rating for each blog and over all
--As a user, I can see which words and blogs were the most negative and positive
--As a user, I can set my blog to private or public
--As a user, I can see other people's public blog's 
--As a user, I can hack the Gibson and take over the internet
--As a user, I can delete a blog
--As a user, I can delete all blog's at once
--As a user, I can delete my account
+-As a user, I can create a blog
+-As a user, I can see all the blogs I have written
+-As a user, I can view the movie information based on the blogs they have written
