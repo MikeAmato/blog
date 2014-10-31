@@ -1,4 +1,24 @@
 
-.center_align {
+.welcome_center_align {
   text-align: center;
+  border: solid;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+.welcome {
+  text-align: center;
+  color: red;
+
+}
+
+#align_center {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+body {
+  background-image: url("http://www.airrockstar.com/images/ULT_Background_v6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

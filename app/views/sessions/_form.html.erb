@@ -2,30 +2,27 @@
 <html><head>
 <%= provide(:title, "Sign In")%>
 
- <!-- CSS -->
-    <link rel="stylesheet" href="assets/stylesheets/session.css.scss">
-
 </head>
-<h1 class="center_align">Sign In</h1>
+<h1 class="welcome">Sign In</h1>
 
 <%# form_for(:user) do |s| %>
 <%= form_for(:session, url: sessions_path) do |s| %>
 
  <%# render 'shared/error_messages', object: @s %> 
-  <div class="center_align">
+  <div class="welcome">
     <div>
       <%= s.label :email %>
       <%= s.text_field :email %>
     </div>
     <br/>
 
-    <div class="center_align">
+    <div class="welcome">
       <%= s.label :password %>
       <%= s.password_field :password%>
     </div>
     <br/>
     
-    <div class="center_align">
+    <div class="welcome">
       <%= s.submit 'Done' %>
     </div>
   </div>

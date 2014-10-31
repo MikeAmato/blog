@@ -1,42 +1,42 @@
 <%= provide(:title, "Sign Up")%>
 
-<h1>Sign Up</h1>
+<h1 class="welcome">Sign Up</h1>
 
 <%= form_for(@user) do |user| %>
 
  <%# render 'shared/error_messages', object: @user %> 
 
-  <div>
+  <div class="welcome">
     <%= user.label :name %>
     <%= user.text_field :name %>
   </div>
   <br/>
 
-  <div>
+  <div class="welcome">
     <%= user.label :email %>
     <%= user.text_field :email %>
   </div>
   <br/>
 
-   <div>
+   <div class="welcome">
     <%= user.label :age %>
     <%= user.text_field :age %>
   </div>
   <br/>
 
-  <div>
+  <div class="welcome">
     <%= user.label :password %>
     <%= user.password_field :password%>
   </div>
   <br/>
 
-  <div>
+  <div class="welcome">
     <%= user.label :password_confirmation %>
     <%= user.password_field :password_confirmation%>
   </div>
   <br/>
   
-  <div>
+  <div class="welcome">
     <%= user.submit 'Done' %>
   </div>
 

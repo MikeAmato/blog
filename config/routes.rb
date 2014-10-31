@@ -11,7 +11,7 @@ Rails.application.routes.draw do
    match '/signup', to: 'users#new', via: 'get'
    match '/signin', to: 'sessions#new', via: 'get'
    match '/signout', to: 'sessions#destroy', via: 'get'
-   match '/journals/tweets', to: 'journals#show', via: 'get'
+   match '/journals/movies', to: 'journals#show', via: 'get'
    # match '/journals/new', to: 'journals#new', via: 'get'
   
 

@@ -1,26 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
 <%= provide(:title, "Sign Up")%>
-
-<h1>New Blog</h1>
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/static_pages.css.scss"/>
+</head>
+<h1 class="welcome">New Blog</h1>
 
 <%= form_for(@journal) do |j| %>
 
  <%# render 'shared/error_messages', object: @journal %> 
 
- <div>
+ <div class="welcome">
   <%= j.label :name %>
   <%= j.text_field :name %>
  </div>
 
-  <div>
+  <div class="welcome">
     <%= j.label :blog_contents %>
     <%= j.text_field :blog_contents %>
   </div>
   <br/>
   
-  <div>
+  <div class="welcome">
     <%= j.submit 'Done' %>
   </div>
 
 <% end %> 
 
 <%# link_to "Delete", Journal.first, method: :delete %>
+</html>

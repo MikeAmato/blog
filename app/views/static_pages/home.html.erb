@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="assets/stylesheets/static_pages.css.scss">
+  <style>
+  </style>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/static_pages.css.scss"/>
   <title>Blog | Home </title>
 </head>  
   <body>
-  <h1>Welcome to the Movies Blog</h1>
-
-  <p class="center_align">
-    <% (0..2).each do |i|  %>
-    <div>
-    <%= @journals[i].name %><br/>
-    </div>
-    <div>
-    <%= @journals[i].blog_contents%><br/>
-    </div>
-    <div>
-    <%= @movie["movies"][0]["title"] %>
-    </div>
-    <div>
-    <%= image_tag @movie["movies"][0]["posters"]["profile"] %><br/><br/>
-    </div>
-    <div>
-    <pre><%= @movie["movies"][0]["synopsis"] %></pre>
-    </div>
-
-    <div>
-      <pre><%= @plot['overview'] %></pre>
-    </div>
-    <% end %>
+  <h1 class="welcome">Welcome to the Movies Blog</h1>
+  <p>
+<div class="panel panel-primary" id="align_center">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @journals[0].name %></h3>
+  </div>
+  <div class="panel-body">
+    <%= @journals[0].blog_contents%>
+  </div>
+  <div class="panel-footer"><%= @display_plot_zero['overview'] %></div>
+</div>
+<div class="panel panel-primary" id="align_center">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @journals[1].name %></h3>
+  </div>
+  <div class="panel-body">
+    <%= @journals[1].blog_contents%>
+  </div>
+  <div class="panel-footer"><%= @display_plot_one['overview'] %></div>
+</div>
+<div class="panel panel-primary" id="align_center">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @journals[2].name %></h3>
+  </div>
+  <div class="panel-body">
+    <%= @journals[2].blog_contents%>
+  </div>
+  <div class="panel-footer"><%= @display_plot_two['overview'] %></div>
+</div>
   </p>
 </body>
 <footer>

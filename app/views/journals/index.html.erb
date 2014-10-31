@@ -1,16 +1,23 @@
-<h1>Hello</h1>
-<p><%= @foo %></p>
-<%= @car %>
+<!DOCTYPE html>
+<head>
 
-<ul class="journals">
+</head>
+<body>
+<h1 class="welcome"><%= @user %>'s Blogs</h1>
 
 <p>
 <% @journals.each do |j| %> 
-
-<%= j.name %><br/>
-<%= j.blog_contents %><br/>
-
+<div class="panel panel-primary" id="align_center">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= j.name %></h3>
+  </div>
+  <div class="panel-body">
+    <%= j.blog_contents %>
+  </div>
+</div>
 <% end %>
 </p>
-
-</ul> 
+</body>
+<footer>
+</footer>
+</html>

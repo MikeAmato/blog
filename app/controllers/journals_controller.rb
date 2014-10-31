@@ -36,6 +36,7 @@ end
 
 def index 
   @journals = current_user.journals
+  @user = current_user.name
 end
 
 def destroy 
