@@ -1,8 +1,5 @@
 class SessionsController < ApplicationController
 
-  def new 
-   #Check if new session and create session are basically the same things
-  end
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
@@ -17,8 +14,5 @@ class SessionsController < ApplicationController
   def destroy
     sign_out
     redirect_to root_path
-  end
-
-  def show
   end
 end

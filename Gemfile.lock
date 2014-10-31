@@ -67,6 +67,7 @@ GEM
     ffi (1.9.6-x86-mingw32)
     font-awesome-sass (4.2.2)
       sass (~> 3.2)
+    hashugar (0.0.6)
     hike (1.2.3)
     httparty (0.13.1)
       json (~> 1.8)
@@ -165,6 +166,9 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    themoviedb (0.0.24)
+      hashugar
+      httparty
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -215,6 +219,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   selenium-webdriver (= 2.35.1)
   sentimental
+  themoviedb
   turbolinks
   twitter-bootstrap-rails
   tzinfo-data

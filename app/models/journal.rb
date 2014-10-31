@@ -7,6 +7,4 @@ class Journal < ActiveRecord::Base
 
   validates :name, presence: true, length: { maximum: 50 }
   validates :blog_contents, presence: true, length: { in: 3..254 }
-  
- 
 end

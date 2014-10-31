@@ -10,4 +10,5 @@ require 'json'
                              #http://api.rottentomatoes.com/api/public/v1.0/movies/770672122.json?apikey=rm9au8yvr5y2fgb8sbp2k94h
     JSON.parse(response.body)
   end
+   
 end

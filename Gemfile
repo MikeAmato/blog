@@ -25,6 +25,7 @@ gem 'protected_attributes', '~> 1.0.8'
 gem 'activerecord-session_store' 
 gem 'httparty'
 gem 'sentimental'
+gem 'themoviedb'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
