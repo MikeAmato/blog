@@ -14,7 +14,7 @@ end
 def create 
   @journal = current_user.journals.build(journal_params)  #//for current user
   if @journal.save
-    redirect_to journal_path(@journal.id), notice: "You have created a new entry."
+    redirect_to user_path(current_user.id), notice: "You have created a new entry."
   else
     render 'new'
   end

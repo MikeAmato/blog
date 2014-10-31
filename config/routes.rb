@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/home', to: redirect('/')
 
-  resources :journals, only: [:show, :new, :create, :index, :edit]
+  resources :journals, only: [ :new, :create, :index, :edit]
   resources :users, only: [:create, :edit, :destroy, :show]
   resources :sessions, only: [:create, :destroy]
 
