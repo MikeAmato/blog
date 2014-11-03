@@ -12,7 +12,6 @@ Rails.application.routes.draw do
    match '/signin', to: 'sessions#new', via: 'get'
    match '/signout', to: 'sessions#destroy', via: 'get'
    match '/journals/movies', to: 'journals#show', via: 'get'
-   # match '/journals/new', to: 'journals#new', via: 'get'
   
 
    # The priority is based upon order of creation: first created -> highest priority.
